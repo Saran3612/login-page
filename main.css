@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+html
+{
+height: 100%;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(rgba(27,40,62,255),rgb(0, 255, 64));
+}
+.box
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%,-50%);
+    background: rgba(10,0,0,.5);
+    box-sizing: border-box;
+    box-shadow:  2px 2px 10px 5px rgba(47, 182, 153, 0.6);
+    border-radius: 15px;
+}
+.box h1
+{
+    margin: 0 0 30px 0;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    
+}
+.box .smallbox
+{
+    position: relative;
+}
+.box .smallbox input
+{
+    width: 100%;
+    padding: 10px 0 0 0;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 50px;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    outline: none;
+    background: transparent;
+
+}
+.box .smallbox label
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0 0 0;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    pointer-events: none;
+    transition: 1s;
+}
+.box .smallbox input:focus ~ label,
+.box .smallbox input:valid ~ label
+{
+    top: -30px;
+    left: 0;
+    color: rgba(3,232,245,1);
+    font-size: 16px;
+}
+.box form a
+{
+    position: relative;
+    display: inline-block;
+    padding: 10px 10px;
+    color: rgba(3,232,245,1);
+    font-size: 25px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 1s;
+    margin-top: 1px;
+    letter-spacing: 2px;
+}
+.box a:hover
+{
+    background: rgba(3,232,245,1);
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: 0 0  2px rgba(3,232,245,1),
+    0 0  4px rgba(3,232,245,1),
+    0 0  2px rgba(3,232,245,1),
+    0 0  4px rgba(3,232,245,1);
+}
+.box a span
+{
+    position: absolute;
+    display: block;
+}
+.box a span:nth-child(1)
+{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(3,232,245,1));
+    animation: c001 2s linear infinite;
+}
+@keyframes c001 {
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+.box a span:nth-child(2)
+{
+    top: -100%;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(3,232,245,1));
+    animation: c002 2s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes c002 {
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+.box a span:nth-child(3)
+{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(3,232,245,1));
+    animation: c003 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes c003 {
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+.box a span:nth-child(4)
+{
+    bottom: -100%;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(3,232,245,1));
+    animation: c004 2s linear infinite;
+    animation-delay: 1.5s;
+}
+@keyframes c004 {
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
